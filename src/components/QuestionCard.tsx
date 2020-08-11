@@ -11,6 +11,31 @@ type Props = {
   totalQuestions: number;
 };
 
+function AnswerList({ answers, fallback }) {
+  if (!answers || answers.length === 0) {
+    return fallback;
+  } else {
+    return answers.map(answers => {
+      return <div key={answer}>
+          <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+            <span dangerouslySetInnerHTML={{ __html: answer }} />
+          </button> 
+        </div>
+    });
+  }
+}
+
+// Cut out body of code 
+//  <div>
+//       {answers && answers.map(answer => (
+//           <div key={answer}>
+//           <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+//             <span dangerouslySetInnerHTML={{ __html: answer }} />
+//           </button> 
+//         </div>
+//       ))}
+//     </div>
+
 const QuestionCard: React.FC<Props> = ({
   question,
   answers,
@@ -24,17 +49,7 @@ const QuestionCard: React.FC<Props> = ({
       Question: {questionNr} / {totalQuestions}
     </p>
     <p dangerouslySetInnerHTML={{ __html: question }} />
-    <div>
-      {answers && answers.map(answer => (
-       return ( 
-          <div key={answer}>
-          <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
-            <span dangerouslySetInnerHTML={{ __html: answer }} />
-          </button> 
-        </div>
-)
-      ))}
-    </div>
+     <AnswerList answers={answers} fallback={"Loading..."} />
   </div>
 );
 
