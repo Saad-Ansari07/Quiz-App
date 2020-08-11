@@ -30,6 +30,7 @@ const QuestionCard: React.FC<Props> = ({
             <span dangerouslySetInnerHTML={{ __html: answer }} />
           </button>
 </div>
+</div>
       ))}
   </div>
 );
