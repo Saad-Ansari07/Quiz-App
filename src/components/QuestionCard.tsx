@@ -11,7 +11,7 @@ type Props = {
   totalQuestions: number;
 };
 
-function AnswerList({ answers, fallback }) {
+function AnswerList({ answers: string[], fallback }) {
   if (!answers || answers.length === 0) {
     return fallback;
   } else {
