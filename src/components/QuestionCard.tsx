@@ -31,7 +31,7 @@ const QuestionCard: React.FC<Props> = ({
     <button disabled={!!userAnswer} value={answer} onClick={callback}>
         <span dangerouslySetInnerHTML={{__html: answer }} />
     </button>
-</div> } else {
+</div>) } else {
 console.log('error') };
     ))}
 </div>
