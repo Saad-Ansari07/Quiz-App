@@ -53,8 +53,8 @@ const QuestionCard: React.FC<Props> = ({
       {answers?.map((answer: string) => {
         return (
           <div key={answer}>
-          <button disabled={userAnswer ? true : false} value={answer?} onClick={callback}>
-            {answer?}
+          <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+            {answer}
           </button> 
         </div>
 )
