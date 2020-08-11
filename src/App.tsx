@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { fetchQuestions, QuestionState, Difficulty } from './API';
 import './App.styles.ts';
-import { QuestionCard } from './components/QuestionCard';
+import QuestionCard from './components/QuestionCard';
 import { GlobalStyle, Wrapper } from './App.styles'
 
 
