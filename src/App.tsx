@@ -8,7 +8,7 @@ import { QuestionState, Difficulty } from './API';
 
 export type AnswerObject = {
   question: string;
-  answer: string;
+  answer: string[];
   correct: boolean;
   correctAnswer: string;
 };
