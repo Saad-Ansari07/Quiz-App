@@ -11,30 +11,30 @@ type Props = {
   totalQuestions: number;
 };
 
-const AnswerList: React.FC<Props> = ({ answers, fallback }) => (
-  if (!answers || answers.length === 0) {
-    return fallback;
-  } else {
-    return answers.map(answers => {
-      return <div key={answer}>
-          <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
-            <span dangerouslySetInnerHTML={{ __html: answer }} />
-          </button> 
-        </div>
-    });
-  }
-);
-
-// Cut out body of code 
-//  <div>
-//       {answers && answers.map(answer => (
-//           <div key={answer}>
+// const AnswerList: React.FC<Props> = ({ answers, fallback }) => (
+//   if (!answers || answers.length === 0) {
+//     return fallback;
+//   } else {
+//     return answers.map(answers => {
+//       return <div key={answer}>
 //           <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
 //             <span dangerouslySetInnerHTML={{ __html: answer }} />
 //           </button> 
 //         </div>
-//       ))}
-//     </div>
+//     });
+//   }
+// );
+
+
+ <div>
+      {answers && answers.map(answer => (
+          <div key={answer}>
+          <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+            <span dangerouslySetInnerHTML={{ __html: answer }} />
+          </button> 
+        </div>
+      ))}
+    </div>
 
 const QuestionCard: React.FC<Props> = ({
   question,
@@ -49,7 +49,18 @@ const QuestionCard: React.FC<Props> = ({
       Question: {questionNr} / {totalQuestions}
     </p>
     <p dangerouslySetInnerHTML={{ __html: question }} />
-     <AnswerList answers={answers} fallback={"Loading..."} />
+    <div>
+      {answers && answers.map((answer: string) => {
+        return (
+          <div key={answer}>
+          <button disabled={userAnswer ? true : false} value={answer} onClick={callback}>
+            <span dangerouslySetInnerHTML={{ __html: answer }} />
+          </button> 
+        </div>
+)
+}
+      )}
+    </div>
   </div>
 );
 
