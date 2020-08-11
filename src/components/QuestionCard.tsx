@@ -11,7 +11,7 @@ type Props = {
   totalQuestions: number;
 };
 
-function AnswerList({ answers: string[], fallback }) {
+function AnswerList: React.FC<Props> = ({ answers, fallback }) {
   if (!answers || answers.length === 0) {
     return fallback;
   } else {
