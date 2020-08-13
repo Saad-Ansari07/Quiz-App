@@ -23,19 +23,6 @@ const App: React.FC = () => {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
 
-//   const [Difficulty, setDifficulty] = useState();
-
-//   const setEasy = () => {
-// setDifficulty(EASY);
-//   };
-
-//  const setMedium = () => {
-// setDifficulty(MEDIUM);
-//   };
-
-//  const setHard = () => {
-// setDifficulty(HARD);
-//   };
 
   const startQuiz = async () => {
     setLoading(true);
@@ -81,9 +68,10 @@ const App: React.FC = () => {
     }
   };
 
+
   return (
     <>
-        <h1>REACT QUIZ</h1>
+        <h1>QUIZ</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className='start' onClick={startQuiz}>
             Start
