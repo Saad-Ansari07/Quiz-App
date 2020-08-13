@@ -23,7 +23,7 @@ const searchParams = new URLSearchParams(location.search);
 export type QuestionState = Question & { answers: string[] };
 
 export const fetchQuestions = async (amount: number, difficulty: Difficulty): Promise<QuestionState[]> => {
-  const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${searchParams.get("difficulty")}&type=multiple`;
+  const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${searchParams.get("Difficulty")}&type=multiple`;
   const data = await (await fetch(endpoint)).json();
   return data.results.map((question: Question) => ({
     ...question,
