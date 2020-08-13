@@ -23,6 +23,20 @@ const App: React.FC = () => {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
 
+//   const [Difficulty, setDifficulty] = useState();
+
+//   const setEasy = () => {
+// setDifficulty(EASY);
+//   };
+
+//  const setMedium = () => {
+// setDifficulty(MEDIUM);
+//   };
+
+//  const setHard = () => {
+// setDifficulty(HARD);
+//   };
+
   const startQuiz = async () => {
     setLoading(true);
     setGameOver(false);
