@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { fetchQuestions } from './API';
 // Components
@@ -6,9 +5,10 @@ import QuestionCard from './components/QuestionCard';
 // types
 import { QuestionState, Difficulty } from './API';
 
+
 export type AnswerObject = {
   question: string;
-  answer: string[];
+  answer: string;
   correct: boolean;
   correctAnswer: string;
 };
@@ -22,7 +22,6 @@ const App: React.FC = () => {
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
-
 
   const startQuiz = async () => {
     setLoading(true);
@@ -68,9 +67,10 @@ const App: React.FC = () => {
     }
   };
 
-
   return (
     <>
+      
+      <div>
         <h1>QUIZ</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
           <button className='start' onClick={startQuiz}>
@@ -94,8 +94,12 @@ const App: React.FC = () => {
             Next Question
           </button>
         ) : null}
+      </div>
     </>
   );
 };
 
 export default App;
+
+
+
