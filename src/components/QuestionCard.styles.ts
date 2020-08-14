@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   max-width: 2000px;
   max-height: 2000px;
-  height: 1000px;
+  height: 600px;
   background: linear-gradient(to bottom right, rgba(250, 8, 8, 0.801), rgb(180, 180, 16));
   border-radius: 10px;
   border: 2px solid #0085a3;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   text-align: center;
   justify-content: center;
   p {
-    font-size: 1rem;
+    font-size: 5rem;
   }
 `;
 
