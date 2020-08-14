@@ -24,3 +24,11 @@ color: white;
 padding: 6px;
 text-align: center;
 }
+
+.score {
+background: -webkit-linear-gradient(rgba(250, 8, 8, 0.801), rgb(180, 180, 16));
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: fantasy;
+}
