@@ -36,7 +36,7 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
         ? 'linear-gradient(to bottom right, rgba(250, 8, 8, 0.801), rgb(180, 180, 16))'
         : !correct && userClicked
         ? 'linear-gradient(90deg, #FF5656, #C16868)'
-        : 'linear-gradient(to bottom right, rgba(250, 8, 8, 0.801), rgb(180, 180, 16))'
+        : 'linear-gradient(to bottom right, rgba(250, 8, 8, 0.801), rgb(180, 180, 16))'};
     border: 3px solid #ffffff;
     box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
