@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   text-align: center;
   justify-content: center;
   p {
-    font-size: 5rem;
+    font-size: 2rem;
   }
 `;
 
@@ -33,6 +33,7 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     width: 100%;
     height: 100px;
     margin: 5px 0;
+    font-size: 2rem;
     background: ${({ correct, userClicked }) =>
       correct
         ? 'linear-gradient(to bottom right, rgba(250, 8, 8, 0.801), rgb(180, 180, 16))'
