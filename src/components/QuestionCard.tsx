@@ -63,7 +63,6 @@ const QuestionCard: React.FC<Props> = ({
             {answer}
           </button> 
 </ButtonWrapper>
-        </div>
 )
 }
       )}
